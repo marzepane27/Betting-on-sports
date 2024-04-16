@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата через банківський переказ</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+        }
+
+        .payment-form {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            border: 2px solid #2196f3;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        .bank-icon {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 100px;
+            height: 100px;
+            background-color: #2196f3;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            font-size: 40px;
+            color: white;
+        }
+
+        .p1 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 820px;
+                text-align: center;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="payment-form">
+        <div class="bank-icon">&#x1F3E6;</div>
+        <h3>Оплата через банківський переказ</h3>
+        <p>Будь ласка, здійсніть банківський переказ на наступні банківські реквізити:</p>
+        <pre>
+IBAN: UA123456789046457543578
+SWIFT: BANKUA00
+Bank: MONOBANK, Kyiv, Ukraine
+Name: Гапшенко Юрій
+
+        </pre>
+    </div>
+    <div class="p1">
+        <p>Після здійснення переказу, будь ласка, надішліть нам підтвердження.</p>
+        <button type="button" class="btn btn-primary">Надіслати підтвердження</button>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Мій профіль</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f8fc;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header div.logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header div.logo span {
+            color: white;
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            padding: 5px 15px;
+            text-decoration: none;
+            color: white;
+            background-color: #3498db;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+        }
+
+        main {
+            display: flex;
+            min-height: 80vh;
+        }
+
+        aside {
+            width: 250px;
+            background-color: #ecf0f1;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        article {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #34495e;
+            border-bottom: 2px solid #bdc3c7;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .currency-basket {
+            float: right;
+            margin-right: 20px;
+            color: white;
+            background-color: #3498db;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .news-widget, .offers-widget {
+            margin-bottom: 20px;
+        }
+
+    </style>
+<style>
+.avatar-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+}
+
+.avatar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    cursor: move;
+}
+</style></head>
+<body>
+<header>
+<div class="logo">
+<span>Ставки на спорт</span>
+</div>
+<nav>
+<a href="Авторизація.html">Авторизація</a>
+<a href="Реєстрація.html">Реєстрація</a>
+<a href="Головна сторінка.html">Головна</a>
+<a href="Спортивні ставки.html">Спортивні ставки</a>
+<a href="Мій профіль.html">Мій профіль</a>
+<a href="Кошик.html">Кошик</a>
+</nav>
+</header>
+<section class="container mt-5"><h2 class="mb-4">Мій профіль</h2><div class="text-center mb-4"><img alt="Аватар користувача" class="rounded-circle" height="150" src="#" width="150"/></div><div class="text-center mb-4"><div class="avatar-container"><img alt="User's Avatar" class="avatar" id="avatarImage" src="#"/></div><input class="mb-2" onchange="displayAvatar(event);" type="file"/></div><div><p id="displayUsername">Ім'я: [Ім'я користувача]</p></div><p id="displayPassword">Пароль: [Пароль користувача]</p></section><script>
+window.onload = function() {
+    let username = sessionStorage.getItem('username');
+    let password = sessionStorage.getItem('password');
+    if (username) {
+        document.getElementById('displayUsername').innerText = "Ім'я: " + username;
+    }
+    if (password) {
+        document.getElementById('displayPassword').innerText = "Пароль: " + password;
+    }
+};
+</script><script>
+window.onload = function() {
+    let username = sessionStorage.key(0);  
+    let password = sessionStorage.getItem(username);
+
+    if (username) {
+        document.getElementById('displayUsername').innerText = "Ім'я: " + username;
+    }
+    if (password) {
+        document.getElementById('displayPassword').innerText = "Пароль: " + password;
+    }
+};
+</script><script>
+function displayAvatar(event) {
+    let avatarImage = document.getElementById('avatarImage');
+    avatarImage.src = URL.createObjectURL(event.target.files[0]);
+};
+</script><script>
+let isDragging = false;
+let startX, startY, originalLeft, originalTop;
+
+document.getElementById('avatarImage').addEventListener('mousedown', function(event) {
+    isDragging = true;
+    startX = event.clientX;
+    startY = event.clientY;
+    originalLeft = this.offsetLeft;
+    originalTop = this.offsetTop;
+});
+
+document.addEventListener('mousemove', function(event) {
+    if (isDragging) {
+        let avatarImage = document.getElementById('avatarImage');
+        let dx = event.clientX - startX;
+        let dy = event.clientY - startY;
+        avatarImage.style.left = (originalLeft + dx) + 'px';
+        avatarImage.style.top = (originalTop + dy) + 'px';
+    }
+});
+
+document.addEventListener('mouseup', function(event) {
+    isDragging = false;
+});
+</script></body>
+</html>

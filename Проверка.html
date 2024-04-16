@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Авторизація</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f8fc;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header div.logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header div.logo span {
+            color: #3498db; /* Changed logo text color */
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            padding: 5px 15px;
+            text-decoration: none;
+            color: #3498db; /* Changed link color */
+            background-color: #fff; /* Changed link background color */
+            border: 1px solid #3498db; /* Added border to links */
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #3498db; /* Link hover color matches link color */
+            color: #fff; /* Link text color on hover */
+        }
+
+        main {
+            display: flex;
+            min-height: 80vh;
+        }
+
+        aside {
+            width: 250px;
+            background-color: #ecf0f1;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        article {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #3498db; /* Updated heading color */
+            border-bottom: 2px solid #3498db; /* Updated heading border color */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .registration-form {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff; /* Changed form background color */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .google-signin-btn {
+            display: block;
+            width: 100%;
+            background-color: #4285F4;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .google-signin-btn:hover {
+            background-color: #357ABD;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <span>Спортивні ставки</span>
+    </div>
+    <nav>
+        <a href="Авторизація.html">Авторизація</a>
+        <a href="Реєстрація.html">Реєстрація</a>
+        <a href="Головна сторінка.html">Головна</a>
+        <a href="Спортивні ставки.html">Спортивні ставки</a>
+        <a href="Мій профіль.html">Мій профіль</a>
+        <a href="Кошик.html">Кошик</a>
+    </nav>
+</header>
+<div class="container">
+    <div class="registration-form">
+        <h2>Авторизація</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="username">Ім'я користувача:</label>
+                <input class="form-control" id="loginUsername" name="username" required="" type="text"/>
+            </div>
+            <div class="form-group">
+                <label for="email">Електронна пошта:</label>
+                <input class="form-control" id="email" name="email" required="" type="email"/>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input class="form-control" id="loginPassword" name="password" required="" type="password"/>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Підтвердіть пароль:</label>
+                <input class="form-control" required="" style="display:none" type="password"/>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Підтвердіть пароль:</label>
+                <input class="form-control" id="confirmPassword" placeholder="Підтвердіть ваш пароль" type="password"/>
+            </div>
+            <button class="btn btn-primary" onclick="loginUser();" type="submit">Авторизація</button>
+        </form>
+    </div>
+    <!-- "Sign in with Google" button -->
+    <button class="google-signin-btn" onclick="imitateGoogleSignIn()" style="margin-top: 20px;">Увійти через Google</button>
+</div>
+<script>
+    function imitateGoogleSignIn() {
+        alert('Успішний вхід через Google!');
+        // Тут можна додати код для переходу на іншу сторінку або будь-яку іншу логіку.
+    }
+</script>
+<script>
+    function loginUser() {
+        let username = document.getElementById("loginUsername").value;
+        let password = document.getElementById("loginPassword").value;
+
+        // Check if user exists in sessionStorage and password matches
+        if (sessionStorage.getItem(username) === password) {
+            alert("Вхід виконано успішно!");
+            // Here you can redirect the user to the main page or other page
+        } else {
+            alert("Неправильне ім'я користувача або пароль");
+        }
+    }
+</script>
+</body>
+</html>

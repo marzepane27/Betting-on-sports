@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата через Yandex.Money</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f5e9;
+        }
+
+        .payment-form {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        .yandex-money-logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 180px;
+        }
+
+        .p1 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 820px;
+                text-align: center;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="payment-form">
+        <img class="yandex-money-logo" src="https://yastatic.net/money-constructor/3.0/ym-logo.png" alt="Yandex.Money Logo">
+        <h3>Оплата через Yandex.Money</h3>
+        <p>Для оплати за допомогою Yandex.Money, будь ласка, введіть свій номер рахунку:</p>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="yandexAccount" placeholder="Номер рахунку" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Сплатити через Yandex.Money</button>
+        </form>
+    </div>
+    <div class="p1">
+        <p>Після здійснення переказу, будь ласка, надішліть нам підтвердження.</p>
+        <button type="button" class="btn btn-primary">Надіслати підтвердження</button>
+  </div>
+</body>
+
+</html>

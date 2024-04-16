@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+    
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f8fc;
+        }
+
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .payment-method {
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            color: #3a1414;
+        }
+
+        .payment-method:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+         .payment-method:hover {
+          color: #000000; 
+          text-decoration: none; 
+        }
+         
+        .m1{
+            color: #fffcfc; 
+          text-decoration: none; 
+          transform: scale(1.05);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .p1 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 820px;
+                text-align: center;
+       }
+    </style>
+</head>
+
+<body>
+    <header class="bg-dark text-white p-3 text-center">
+
+        <div class="m1">Виберіть спосіб оплати нижче
+            </div>
+    </header>
+
+    <main>
+        <div class="payment-methods">
+            <a href="Оплата_Кредитна_картка.html" class="payment-method"><h5>Кредитна/дебетова картка</h5></a>
+            <a href="Оплата_PayPal.html" class="payment-method"><h5>PayPal</h5></a>
+            <a href="Оплата_Google_Pay.html" class="payment-method"><h5>Google Pay</h5></a>
+            <a href="Оплата_Apple_Pay.html" class="payment-method"><h5>Apple Pay</h5></a>
+            <a href="Оплата_Bitcoin_BitPay.html" class="payment-method"><h5>Bitcoin (через BitPay)</h5></a>
+            <a href="Оплата_Amazon_Pay.html" class="payment-method"><h5>Amazon Pay</h5></a>
+            <a href="Оплата_WebMoney.html" class="payment-method"><h5>WebMoney</h5></a>
+            <a href="Оплата_Skrill.html" class="payment-method"><h5>Skrill</h5></a>
+            <a href="Оплата_Neteller.html" class="payment-method"><h5>Neteller</h5></a>
+            <a href="Оплата_Western_Union.html" class="payment-method"><h5>Western Union</h5></a>
+            <a href="Оплата_Bank_Transfer.html" class="payment-method"><h5>Bank Transfer</h5></a>
+            <a href="Оплата_QIWI_Wallet.html" class="payment-method"><h5>QIWI Wallet</h5></a>
+            <a href="Оплата_Yandex_Money.html" class="payment-method"><h5>Yandex.Money</h5></a>
+            <a href="Оплата_Payoneer.html" class="payment-method"><h5>Payoneer</h5></a>
+            <a href="Оплата_Stripe.html" class="payment-method"><h5>Stripe</h5></a>
+        </div>
+        <div class="p1">
+              <p>Після здійснення переказу, будь ласка, надішліть нам підтвердження.</p>
+              <button type="button" class="btn btn-primary">Надіслати підтвердження</button>
+        </div>
+    </main>
+
+</body>
+
+</html>

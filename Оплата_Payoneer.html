@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата через Payoneer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e1f5fe;
+        }
+
+        .payment-form {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            border: 2px solid #03a9f4;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        .payoneer-logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 180px;
+        }
+
+        .p1 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 820px;
+                text-align: center;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="payment-form">
+        <img class="payoneer-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Payoneer_logo.png" alt="Payoneer Logo">
+        <h3>Оплата через Payoneer</h3>
+        <p>Для оплати за допомогою Payoneer, будь ласка, введіть свою електронну адресу асоційовану з вашим рахунком:</p>
+        <form>
+            <div class="form-group">
+                <input type="email" class="form-control" id="payoneerEmail" placeholder="Електронна адреса" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Сплатити через Payoneer</button>
+        </form>
+    </div>
+    <div class="p1">
+        <p>Після здійснення переказу, будь ласка, надішліть нам підтвердження.</p>
+        <button type="button" class="btn btn-primary">Надіслати підтвердження</button>
+  </div>
+</body>
+
+</html>
